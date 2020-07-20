@@ -9,15 +9,24 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Route exact path="/" component={Login} />
-        <Route exact path="/BubblePage" component={BubblePage} />
+        <li>
+        <Link to="/login"> Login </Link>}
+        </li>
+        <li>
+        <Link to="/protected"> BubblePage </Link>}
+        </li>
+        <li>
+        <Link to="/contact"> Contact:console.warn(); </Link>}
+        </li>
+       <Switch>
+        <Route  path="/login" component={Login} />
+        <PrivateRoute  exact path="/protected" component={BubblePage} />
+        <Route  path="/contact" component={BubblePage} />
+        </Switch> 
         {/* 
           Build a PrivateRoute component that will 
           display BubblePage when you're authenticated 
-        */
-        <Link to="/protected"> Protected Page</Link>}
-        <Link to="/login"> Protected Page</Link>}
-        
+        */}
       </div>
     </Router>
   );
