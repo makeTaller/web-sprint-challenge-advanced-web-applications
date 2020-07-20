@@ -21,7 +21,7 @@ function App() {
        <Switch>
         <Route  path="/login" component={Login} />
         <PrivateRoute  exact path="/protected" component={BubblePage} />
-        <Route  path="/contact" component={BubblePage} />
+        <Route  path="/contact" component={Contact} />
         </Switch> 
         {/* 
           Build a PrivateRoute component that will 
